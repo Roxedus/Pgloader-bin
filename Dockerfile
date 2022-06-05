@@ -30,7 +30,7 @@ RUN wget -O /tmp/pgloader.tar.gz -L \
 
 RUN mkdir -p /opt/src/pgloader/build/bin && \
     cd /opt/src/pgloader && \
-    make clones save
+    make DYNSIZE=32768 clones save
 
 FROM debian:stable-slim
 

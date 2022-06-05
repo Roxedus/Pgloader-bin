@@ -34,6 +34,7 @@ jobs:
           cache-to: ghcr.io/roxedus/pgloader:cache
           tags: |
             ghcr.io/roxedus/pgloader
+            ghcr.io/roxedus/pgloader:df7cb
 
       - name: Grab binary
         run: |
@@ -47,6 +48,6 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          tag: "3047c9a"
+          tag: "df7cb"
           artifacts: "bin/pgloader"
           token: ${{ secrets.GITHUB_TOKEN }}
