@@ -34,6 +34,8 @@ RUN mkdir -p /opt/src/pgloader/build/bin && \
 
 FROM debian:stable-slim
 
+LABEL maintainer=Roxedus
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
